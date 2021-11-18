@@ -1,0 +1,226 @@
+/* ======================= MAIN ======================= */
+.content {
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &-left {
+        flex: 1 1 936px;
+        margin-right: 24px;
+    }
+
+    &-right {
+        // position: fixed;
+        // top: 0;
+        // right: 0;
+        flex: 0 0 264px;
+    }
+}
+
+.change {
+    overflow: hidden;
+
+    @include section-bg;
+
+    &__item {
+        line-height: 26px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #dbdcde;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 12px 18px 12px 42px;
+
+        @include transition;
+
+        @media (min-width: $md3+px) {
+            &:hover {
+                background-color: #dbdcde;
+            }
+        }
+
+        &--active {
+            background-color: #dbdcde;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        width: 18px;
+        height: 18px;
+        transform: translateY(-50%);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.donation {
+    margin-bottom: 24px;
+
+    @include section-bg;
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 24px 29px 28px 32px;
+        border-bottom: 1px solid #dbdcde;
+
+        &-title {
+            position: relative;
+            display: inline-block;
+            padding-left: 26px;
+            margin-bottom: 7px;
+            font-size: 14px;
+            line-height: 20px;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                content: "";
+                background: url(../img/icons/dollar-sign.svg) center center/cover no-repeat;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-exchange {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+            line-height: 16px;
+            color: #6c6d6f;
+            white-space: nowrap;
+
+            span {
+                margin-right: 10px;
+                font-size: 24px;
+                line-height: 24px;
+                color: #00a651;
+            }
+        }
+
+        &-id {
+            display: inline-block;
+            margin-bottom: 4px;
+            font-family: $fontFamilySecondary;
+            line-height: 20px;
+        }
+
+        &-code {
+            font-family: $fontFamilySecondary;
+            line-height: 24px;
+        }
+
+        &-btn {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: flex-start;
+        padding: 16px 0;
+
+        &-col {
+            flex-basis: auto;
+            padding: 0 32px;
+
+            &:not(:last-child) {
+                border-right: 1px solid #d7d8da;
+            }
+        }
+
+        &-title {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #6c6d6f;
+        }
+
+        &-success {
+            position: relative;
+            padding-left: 26px;
+            line-height: 21px;
+            color: #00a651;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                content: "";
+                background: url(../../img/icons/check.svg) center center no-repeat;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-link {
+            line-height: 21px;
+            color: #6665dd;
+            text-decoration-line: underline;
+        }
+    }
+}
+
+.tabs {
+    padding: 31px 23px 0;
+
+    @include section-bg;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        &-btn {
+            padding: 14px 15px 12px;
+            font-size: 12px;
+            font-weight: $fw-semiBold;
+            line-height: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            background: #fff;
+            border: 1px solid transparent;
+            border-radius: 6px 6px 0 0;
+
+            @include transition;
+
+            &--active {
+                color: #00a651;
+                border: 1px solid #dbdcde;
+                border-bottom: 1px solid #fff;
+            }
+        }
+    }
+}

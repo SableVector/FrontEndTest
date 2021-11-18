@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FrontEndTest</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Work+Sans:wght@400;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<!-- ======================= HEADER ======================= -->
+
+<header class="header">
+    <div class="container">
+
+        <div class="header__wrapper">
+            <h1 class="title title__header">Donations</h1>
+
+            <form class="header__form" action="#">
+                <label class="header__form-title visually-hidden" for="search">Search</label>
+                <div class="header__form-inner">
+                    <input class="header__form-input" type="text" name="search" placeholder="Search">
+                    <button class="header__form-btn" type="submit">
+                        <img src="img/icons/search.svg" alt="search icon">
+                    </button>
+                </div>
+
+                <select class="header__form-select" name="status" id="status">
+                    <option class="header__form-option" value="All statuses">All statuses</option>
+                    <option class="header__form-option" value="All statuses">status 1</option>
+                    <option class="header__form-option" value="All statuses">status 2</option>
+                    <option class="header__form-option" value="All statuses">status 3</option>
+                </select>
+            </form>
+
+        </div>
+
+
+
+    </div>
+</header>
+		<!-- ======================= MAIN ======================= -->
+		<main class="main">
+			<!-- ======================= MAIN ======================= -->
+<section class="content">
+    <div class="container">
+
+        <div class="content__wrapper">
+            <div class="content-left">
+
+                <div class="donation">
+                    <div class="donation__header">
+                        <div class="donation__header-left">
+                            <span class="donation__header-title">Donation</span>
+                            <div class="donation__header-exchange">
+                                <span>€20.60 EUR</span> ≈ $22.22 USD
+                            </div>
+                        </div>
+                        <div class="donation__header-right">
+                            <span class="donation__header-id">ID</span>
+                            <div class="donation__header-code">
+                                <span>DYHY694Y</span>
+                                <button class="donation__header-btn" type="button">
+                                    <img class="donation__header-img" src="img/icons/copy.svg" alt="copy icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="donation__footer">
+                        <div class="donation__footer-col">
+                            <span class="donation__footer-title">Status</span>
+                            <span class="donation__footer-success">Success</span>
+                        </div>
+                        <div class="donation__footer-col">
+                            <span class="donation__footer-title">Supporter</span>
+                            <a class="donation__footer-link" href="#">Charlotte Ann</a>
+                        </div>
+                        <div class="donation__footer-col">
+                            <span class="donation__footer-title">Campaign</span>
+                            <a class="donation__footer-link" href="#">Workout for water</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    <ul class="tabs__list">
+                        <li class="tabs__item">
+                            <button class="tabs__item-btn tabs__item-btn--active">Behavior</button>
+                        </li>
+                        <li class="tabs__item">
+                            <button class="tabs__item-btn">Appearance</button>
+                        </li>
+                        <li class="tabs__item">
+                            <button class="tabs__item-btn">Custom Fields</button>
+                        </li>
+                        <li class="tabs__item">
+                            <button class="tabs__item-btn">Questions</button>
+                        </li>
+                        <li class="tabs__item">
+                            <button class="tabs__item-btn">URL Control</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="content-right">
+
+                <div class="change">
+                    <ul class="change__list">
+                        <li class="change__item">
+                            <a class="change__link" href="#">
+                                <div class="change__img">
+                                    <img src="img/icons/repeat.svg" alt="Change Amount icon">
+                                </div>
+                                Change Amount
+                            </a>
+                        </li>
+                        <li class="change__item">
+                            <a class="change__link" href="#">
+                                <div class="change__img">
+                                    <img src="img/icons/wallet.svg" alt="Change Payment Method icon">
+                                </div>
+                                Change Payment Method
+                            </a>
+                        </li>
+                        <li class="change__item">
+                            <a class="change__link change__link--active" href="#">
+                                <div class="change__img">
+                                    <img src="img/icons/calendar.svg" alt="Change Date icon">
+                                </div>
+                                Change Date
+                            </a>
+                        </li>
+                        <li class="change__item">
+                            <a class="change__link" href="#">
+                                <div class="change__img">
+                                    <img src="img/icons/x-circle.svg" alt="Cancel Recurring icon">
+                                </div>
+                                Cancel Recurring
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+		</main>
+		
+	</div>
+
+	
+	<!-- ======================= JavaScript ======================= -->
+
+<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
