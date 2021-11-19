@@ -516,16 +516,20 @@ h6 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 336px;
           flex: 0 1 336px;
-  margin-right: 36px;
+  margin-right: 35px;
 }
 
 .header__form-input {
   width: 100%;
-  padding: 8px 18px 8px 42px;
-  line-height: 20px;
+  padding: 8px 18px 8px 40px;
+  line-height: 21px;
   color: #6c6d6f;
   border: 1px solid #dbdcde;
   border-radius: 8px;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .header__form-btn {
@@ -536,6 +540,7 @@ h6 {
   height: 18px;
   background-color: transparent;
   border: none;
+  outline: none;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -571,9 +576,13 @@ h6 {
       -ms-flex: 1 1 936px;
           flex: 1 1 936px;
   margin-right: 24px;
+  overflow: hidden;
 }
 
 .content-right {
+  position: sticky;
+  top: 0;
+  right: 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 264px;
           flex: 0 0 264px;
@@ -601,6 +610,7 @@ h6 {
   display: inline-block;
   width: 100%;
   padding: 12px 18px 12px 42px;
+  outline: none;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -647,7 +657,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 24px 29px 28px 32px;
+  padding: 22px 29px 27px 32px;
   border-bottom: 1px solid #dbdcde;
 }
 
@@ -684,7 +694,7 @@ h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 26px;
   color: #6c6d6f;
   white-space: nowrap;
 }
@@ -727,6 +737,8 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -777,10 +789,14 @@ h6 {
   color: #6665dd;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .tabs {
-  padding: 32px 0;
+  padding: 31px 0 22px;
   background: #fff;
   border: 1px solid #dbdcde;
   border-radius: 8px;
@@ -800,19 +816,22 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: auto;
 }
 
 .tabs-trigers__item-btn {
-  padding: 14px 15px 12px;
+  padding: 14px 15px 10px;
   font-size: 12px;
   font-weight: 600;
   line-height: 20px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  white-space: nowrap;
   cursor: pointer;
   background: #fff;
   border: 1px solid transparent;
   border-radius: 6px 6px 0 0;
+  outline: none;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -825,30 +844,31 @@ h6 {
 }
 
 .tabs-content {
-  padding-top: 38px;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
 .tabs-btns {
-  padding: 24px 32px;
+  padding: 23px 32px 0;
   background: #fffbec;
   border-top: 1px solid #dbdcde;
 }
 
 .tabs-btns__btn {
-  padding: 12px 24px;
+  padding: 12px 23px;
   line-height: 24px;
   text-align: center;
   cursor: pointer;
   border: none;
   border-radius: 6px;
+  outline: none;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .tabs-btns__btn:not(:last-child) {
-  margin-right: 16px;
+  margin-right: 10px;
 }
 
 .tabs-btns__btn--primery {
@@ -900,6 +920,9 @@ h6 {
   padding-left: 31px;
   line-height: 23px;
   text-align: left;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .content-form__inner {
@@ -979,6 +1002,9 @@ h6 {
   height: 24px;
   border: 1px solid #a9abae;
   border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .content-form__radio:checked + .content-form__radio-style {
@@ -1042,6 +1068,10 @@ h6 {
           transform: translate(-50%, -50%);
 }
 
+.content-form__checkbox:focus + .content-form__checkbox-style {
+  border-color: #2eb670;
+}
+
 .content-form--radio,
 .content-form--checkbox {
   cursor: pointer;
@@ -1064,6 +1094,7 @@ h6 {
   cursor: pointer;
   background: #dbdcde;
   border-radius: 8px;
+  outline: none;
   opacity: 0.7;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1087,9 +1118,21 @@ h6 {
 }
 
 @media (min-width: 767.98px) {
+  .header__form-input:hover,
+  .header__form-input:focus {
+    border-color: #00a651;
+    opacity: 0.7;
+  }
+
   .change__link:hover,
   .change__link:focus {
     background-color: #dbdcde;
+  }
+
+  .donation__footer-link:hover,
+  .donation__footer-link:focus {
+    color: #00a651;
+    text-decoration: none;
   }
 
   .tabs-trigers__item-btn:hover,
@@ -1099,13 +1142,25 @@ h6 {
     border-bottom: 1px solid #fff;
   }
 
-  .tabs-btns__btn--primery:hover {
+  .tabs-btns__btn--primery:hover,
+  .tabs-btns__btn--primery:focus {
     background-color: #29a263;
   }
 
-  .tabs-btns__btn--secondary:hover {
+  .tabs-btns__btn--secondary:hover,
+  .tabs-btns__btn--secondary:focus {
     color: #2eb670;
     border: 1px solid #2eb670;
+  }
+
+  .content-form__sublabel:hover,
+  .content-form__sublabel:focus {
+    color: #2eb670;
+  }
+
+  .content-form__sublabel:hover .content-form__radio-style,
+  .content-form__sublabel:focus .content-form__radio-style {
+    border-color: #2eb670;
   }
 
   .content-form__range:hover,

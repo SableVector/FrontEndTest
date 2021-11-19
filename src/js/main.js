@@ -39,6 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	removeContent();
 	addContent();
 
+
 });
 
 
