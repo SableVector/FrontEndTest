@@ -40,23 +40,146 @@
                 </div>
 
                 <div class="tabs">
-                    <ul class="tabs__list">
-                        <li class="tabs__item">
-                            <button class="tabs__item-btn tabs__item-btn--active">Behavior</button>
+
+                    <div class="tabs-trigers">
+                        <ul class="tabs-trigers__list">
+                            <li class="tabs-trigers__item">
+                                <button class="tabs-trigers__item-btn tabs-trigers__item-btn--active">Behavior</button>
+                            </li>
+                            <li class="tabs-trigers__item">
+                                <button class="tabs-trigers__item-btn">Appearance</button>
+                            </li>
+                            <li class="tabs-trigers__item">
+                                <button class="tabs-trigers__item-btn">Custom Fields</button>
+                            </li>
+                            <li class="tabs-trigers__item">
+                                <button class="tabs-trigers__item-btn">Questions</button>
+                            </li>
+                            <li class="tabs-trigers__item">
+                                <button class="tabs-trigers__item-btn">URL Control</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="tabs-content">
+                        <li class="tabs-content__item">
+
+                            <form class="tabs-content__form content-form" action="#">
+
+                                <div class="content-form__item">
+                                    <label class="content-form__label" for="designation">Designation</label>
+                                    <select class="content-form__select" name="designation" id="designation">
+                                        <option class="content-form__option" value="Match Checkout Setting">Match
+                                            Checkout Setting</option>
+                                        <option class="content-form__option" value="Setting">Setting-1</option>
+                                        <option class="content-form__option" value="Setting">Setting-2</option>
+                                        <option class="content-form__option" value="Setting">Setting-3</option>
+                                    </select>
+                                </div>
+
+                                <div class="content-form__item">
+                                    <label class="content-form__label" for="number">Goal</label>
+                                    <div class="content-form__inner">
+                                        <input class="content-form__input" type="number" name="number"
+                                            placeholder="$10.00">
+                                        <label class="visually-hidden" for="curency">Designation</label>
+                                        <select class="content-form__select content-form__select--curency"
+                                            name="curency" id="designation">
+                                            <option class="content-form__option" value="USD">USD</option>
+                                            <option class="content-form__option" value="EUR">EUR</option>
+                                            <option class="content-form__option" value="PLN">PLN</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="content-form__item content-form__item--setting">
+                                    <label class="content-form__label" for="">Default Amount</label>
+
+                                    <div class="content-form__filter">
+                                        <div class="content-form__radio-btns">
+                                            <label class="content-form__sublabel content-form--radio"
+                                                for="match-checkout-setting">
+                                                <input class="content-form__radio" type="radio" name="radio"
+                                                    id="match-checkout-setting">
+                                                <span class="content-form__radio-style"></span>
+                                                Match Checkout Setting
+                                            </label>
+                                            <label class="content-form__sublabel content-form--radio" for="customize">
+                                                <input class="content-form__radio" type="radio" name="radio"
+                                                    id="customize" checked>
+                                                <span class="content-form__radio-style"></span>
+                                                Customize
+                                            </label>
+                                        </div>
+                                        <div class="content-form__checkbox-btns">
+                                            <label class="content-form__sublabel content-form--checkbox"
+                                                for="default-currency">
+                                                <input class="content-form__checkbox" type="checkbox"
+                                                    name="default-currency" id="default-currency">
+                                                <span class="content-form__checkbox-style"></span>
+                                                Allow donor to change default currency
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content-form__item">
+                                    <label class="content-form__label" for="border-size">Border size</label>
+                                    <input class="content-form__range" type="range" min="1" max="100" value="65"
+                                        step="1" name="border-size">
+                                    <span class="content-form__size">2px</span>
+                                </div>
+
+                                <div class="content-form__item">
+                                    <label class="content-form__label" for="border-radius">Border radius</label>
+                                    <input class="content-form__range" type="range" min="1" max="100" value="65"
+                                        step="1" name="border-radius">
+                                    <span class="content-form__sublable">15px</span>
+                                </div>
+
+                            </form>
+
                         </li>
-                        <li class="tabs__item">
-                            <button class="tabs__item-btn">Appearance</button>
+                        <!-- /.tabs-content__item -->
+
+                        <li class="tabs-content__item">
+
+                            Content №2
+
                         </li>
-                        <li class="tabs__item">
-                            <button class="tabs__item-btn">Custom Fields</button>
+                        <!-- /.tabs-content__item -->
+
+                        <li class="tabs-content__item">
+
+                            Content №3
+
                         </li>
-                        <li class="tabs__item">
-                            <button class="tabs__item-btn">Questions</button>
+                        <!-- /.tabs-content__item -->
+
+                        <li class="tabs-content__item">
+
+                            Content №4
+
                         </li>
-                        <li class="tabs__item">
-                            <button class="tabs__item-btn">URL Control</button>
+                        <!-- /.tabs-content__item -->
+
+                        <li class="tabs-content__item">
+
+                            Content №5
+
                         </li>
+                        <!-- /.tabs-content__item -->
+
+
                     </ul>
+
+                    <div class="tabs-btns">
+                        <button class="tabs-btns__btn tabs-btns__btn--primery" type="button">Save changes</button>
+                        <button class="tabs-btns__btn tabs-btns__btn--secondary" type="button">Cancel</button>
+                    </div>
+
+
                 </div>
 
             </div>

@@ -1,20 +1,43 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-	const tabsList = document.querySelector('.tabs__list');
+	const tabsList = document.querySelector('.tabs-trigers__list');
+	const tabTrigers = document.querySelectorAll('.tabs-trigers__item-btn');
+	const contents = document.querySelectorAll('.tabs-content__item');
+
+	console.log(tabTrigers);
+
+	const removeContent = () => {
+		for (const content of contents) {
+			content.style.display = 'none';
+		}
+
+		for (const tabTriger of tabTrigers) {
+			tabTriger.classList.remove('tabs-trigers__item-btn--active');
+		}
+	};
+
+	const addContent = (i = 0) => {
+		contents[i].style.display = 'block';
+		tabTrigers[i].classList.add('tabs-trigers__item-btn--active');
+	};
+
 
 	tabsList.addEventListener('click', e => {
 		const target = e.target;
-		const btns = document.querySelectorAll('.tabs__item-btn');
 
 		if (target && target.tagName == 'BUTTON') {
-			btns.forEach(btn => {
-				btn.classList.remove('tabs__item-btn--active');
+			tabTrigers.forEach((item, i) => {
+				if (target === item) {
+					removeContent();
+					addContent(i);
+				}
 			});
-
-			target.classList.add('tabs__item-btn--active');
 		}
 
 	});
+
+	removeContent();
+	addContent();
 
 });
 
