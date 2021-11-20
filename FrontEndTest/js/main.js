@@ -9,11 +9,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 window.addEventListener("DOMContentLoaded", function () {
   var t = document.querySelector(".tabs-trigers__list"),
       e = document.querySelectorAll(".tabs-trigers__item-btn"),
-      s = document.querySelectorAll(".tabs-content__item");
-  console.log(e);
-
-  var o = function o() {
-    var _iterator = _createForOfIteratorHelper(s),
+      o = document.querySelectorAll(".tabs-content__item"),
+      r = function r() {
+    var _iterator = _createForOfIteratorHelper(o),
         _step;
 
     try {
@@ -44,13 +42,13 @@ window.addEventListener("DOMContentLoaded", function () {
   },
       n = function n() {
     var t = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-    s[t].style.display = "block", e[t].classList.add("tabs-trigers__item-btn--active");
+    o[t].style.display = "block", e[t].classList.add("tabs-trigers__item-btn--active");
   };
 
   t.addEventListener("click", function (t) {
-    var s = t.target;
-    s && "BUTTON" == s.tagName && e.forEach(function (t, e) {
-      s === t && (o(), n(e));
+    var o = t.target;
+    o && "BUTTON" == o.tagName && e.forEach(function (t, e) {
+      o === t && (r(), n(e));
     });
-  }), o(), n();
+  }), r(), n(), document.querySelector(".content-right"), document.querySelector(".header"), document.querySelector(".content-left");
 });

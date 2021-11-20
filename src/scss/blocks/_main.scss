@@ -4,12 +4,20 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+
+        @media (max-width: 1000px) {
+            flex-direction: column-reverse;
+        }
     }
 
     &-left {
         flex: 1 1 936px;
         margin-right: 24px;
-        overflow: hidden;
+
+        @media (max-width: 1000px) {
+            width: 100%;
+            margin-right: 0;
+        }
     }
 
     &-right {
@@ -17,19 +25,39 @@
         top: 0;
         right: 0;
         flex: 0 0 264px;
+
+        @media (max-width: 1000px) {
+            flex: 0 0 auto;
+            width: 100%;
+        }
     }
 }
 
 .change {
-    overflow: hidden;
+    // overflow: hidden;
 
     @include section-bg;
+
+    @media (max-width: 1000px) {
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        @media (max-width: 1000px) {
+            display: flex;
+            overflow: auto;
+        }
+    }
 
     &__item {
         line-height: 26px;
 
         &:not(:last-child) {
             border-bottom: 1px solid #dbdcde;
+        }
+
+        @media (max-width: 1000px) {
+            flex: 0 0 200px;
         }
     }
 
@@ -47,6 +75,10 @@
             &:focus {
                 background-color: #dbdcde;
             }
+        }
+
+        @media (max-width: 1000px) {
+            white-space: nowrap;
         }
 
         &--active {
@@ -82,6 +114,16 @@
         padding: 22px 29px 27px 32px;
         border-bottom: 1px solid #dbdcde;
 
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+
+        &-left {
+            @media (max-width: 500px) {
+                margin-bottom: 20px;
+            }
+        }
+
         &-title {
             position: relative;
             display: inline-block;
@@ -116,6 +158,10 @@
                 font-size: 24px;
                 line-height: 24px;
                 color: #00a651;
+
+                @media (max-width: 500px) {
+                    font-size: inherit;
+                }
             }
         }
 
@@ -150,11 +196,12 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        padding: 16px 0;
+        padding: 16px 0 1px;
 
         &-col {
             flex-basis: auto;
             padding: 0 32px;
+            margin-bottom: 15px;
 
             &:not(:last-child) {
                 border-right: 1px solid #d7d8da;
@@ -208,7 +255,7 @@
 }
 
 .tabs {
-    padding: 31px 0 22px;
+    padding: 31px 0 0;
 
     @include section-bg;
 
@@ -263,12 +310,15 @@
     }
 
     &-btns {
-        padding: 23px 32px 0;
+        padding: 23px 32px 13px;
         background: #fffbec;
         border-top: 1px solid #dbdcde;
+        border-end-start-radius: 8px;
+        border-end-end-radius: 8px;
 
         &__btn {
             padding: 12px 23px;
+            margin-bottom: 10px;
             line-height: 24px;
             text-align: center;
             cursor: pointer;
@@ -323,6 +373,11 @@
             margin-bottom: 24px;
         }
 
+        @media (max-width: 530px) {
+            flex-direction: column;
+            align-items: start;
+        }
+
         &--setting {
             align-items: start;
         }
@@ -333,6 +388,11 @@
         margin-right: 16px;
         line-height: 24px;
         text-align: right;
+
+        @media (max-width: 530px) {
+            flex-basis: auto;
+            margin-bottom: 15px;
+        }
     }
 
     &__sublabel {
@@ -359,6 +419,14 @@
     &__inner {
         display: flex;
         flex: 0 1 296px;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 530px) {
+            flex-basis: auto;
+        }
     }
 
     &__select,
@@ -367,6 +435,10 @@
         cursor: pointer;
         border: 1px solid #a9abae;
         border-radius: 6px;
+
+        @media (max-width: 900px) {
+            flex-basis: auto;
+        }
     }
 
     &__select {
@@ -375,6 +447,10 @@
 
         &--curency {
             flex: 0 0 80px;
+
+            @media (max-width: 900px) {
+                width: fit-content;
+            }
         }
     }
 
@@ -384,6 +460,10 @@
         max-width: 192px;
         padding: 8px 11px;
         margin-right: 24px;
+
+        @media (max-width: 900px) {
+            margin-bottom: 15px;
+        }
     }
 
     &__filter {
@@ -495,6 +575,12 @@
             &:focus {
                 opacity: 1;
             }
+        }
+
+        @media (max-width: 530px) {
+            flex-basis: auto;
+            width: 100%;
+            margin-bottom: 10px;
         }
 
         &::-webkit-slider-thumb {

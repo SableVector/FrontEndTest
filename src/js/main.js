@@ -4,8 +4,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	const tabTrigers = document.querySelectorAll('.tabs-trigers__item-btn');
 	const contents = document.querySelectorAll('.tabs-content__item');
 
-	console.log(tabTrigers);
-
 	const removeContent = () => {
 		for (const content of contents) {
 			content.style.display = 'none';
@@ -39,6 +37,38 @@ window.addEventListener('DOMContentLoaded', () => {
 	removeContent();
 	addContent();
 
+
+	// window.onscroll = function showRightPanel () {
+	// 	const header = document.querySelector('.content-right');
+	// 	if(window.pageYOffset > 200) {
+	// 		header.classList.add('fixed');
+	// 	};
+	// }
+
+	const contentRight = document.querySelector('.content-right');
+	const header = document.querySelector('.header');
+	const contentLeft = document.querySelector('.content-left');
+
+
+	// window.addEventListener('scroll', () => {
+	// 	if (window.scrollY >= header.offsetHeight) {
+	// 		contentRight.style.cssText = `
+	// 			position: sticky;
+	// 			top: 15px;
+	// 		`;
+	// 		// contentLeft.style.paddingRight = contentRight.offsetWidth + 'px';
+	// 		// contentLeft.style.marginRight = '0px';
+	// 	} else {
+	// 		contentRight.style.cssText = `
+	// 		position: '';
+	// 		top: '';
+	// 		right: '';
+	// 		`;
+	// 		// contentLeft.style.paddingRight = '';
+	// 		// contentLeft.style.marginRight = '';
+	// 	}
+
+	// });
 
 });
 
