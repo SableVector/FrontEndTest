@@ -34,8 +34,6 @@
 }
 
 .change {
-    // overflow: hidden;
-
     @include section-bg;
 
     @media (max-width: 1000px) {
