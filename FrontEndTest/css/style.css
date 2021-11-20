@@ -775,7 +775,7 @@ h6 {
   width: 18px;
   height: 18px;
   content: "";
-  background: #00a651 url(../../img/icons/check.svg) center center no-repeat;
+  background: #00a651 url(../img/icons/check.svg) center center no-repeat;
   border-radius: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
