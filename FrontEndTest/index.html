@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-EN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
             <form class="header__form" action="#">
                 <label class="header__form-title visually-hidden" for="search">Search</label>
                 <div class="header__form-inner">
-                    <input class="header__form-input" type="text" name="search" placeholder="Search">
+                    <input class="header__form-input" type="text" name="search" placeholder="Search" id="search">
                     <button class="header__form-btn" type="submit">
                         <img src="img/icons/search.svg" alt="search icon">
                     </button>
@@ -47,6 +47,7 @@
 		<main class="main">
 			<!-- ======================= MAIN ======================= -->
 <section class="content">
+    <h2 class="visually-hidden">Site Content</h2>
     <div class="container">
 
         <div class="content__wrapper">
@@ -128,10 +129,10 @@
                                     <label class="content-form__label" for="number">Goal</label>
                                     <div class="content-form__inner">
                                         <input class="content-form__input" type="number" name="number"
-                                            placeholder="$10.00">
+                                            placeholder="$10.00" id="number">
                                         <label class="visually-hidden" for="curency">Designation</label>
                                         <select class="content-form__select content-form__select--curency"
-                                            name="curency" id="designation">
+                                            name="curency" id="curency">
                                             <option class="content-form__option" value="USD">USD</option>
                                             <option class="content-form__option" value="EUR">EUR</option>
                                             <option class="content-form__option" value="PLN">PLN</option>
@@ -141,7 +142,7 @@
                                 </div>
 
                                 <div class="content-form__item content-form__item--setting">
-                                    <label class="content-form__label" for="">Default Amount</label>
+                                    <label class="content-form__label">Default Amount</label>
 
                                     <div class="content-form__filter">
                                         <div class="content-form__radio-btns">
@@ -174,14 +175,14 @@
                                 <div class="content-form__item">
                                     <label class="content-form__label" for="border-size">Border size</label>
                                     <input class="content-form__range" type="range" min="1" max="100" value="65"
-                                        step="1" name="border-size">
+                                        step="1" name="border-size" id="border-size">
                                     <span class="content-form__size">2px</span>
                                 </div>
 
                                 <div class="content-form__item">
                                     <label class="content-form__label" for="border-radius">Border radius</label>
                                     <input class="content-form__range" type="range" min="1" max="100" value="65"
-                                        step="1" name="border-radius">
+                                        step="1" name="border-radius" id="border-radius">
                                     <span class="content-form__sublable">15px</span>
                                 </div>
 
